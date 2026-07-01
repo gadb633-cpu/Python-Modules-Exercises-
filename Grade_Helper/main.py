@@ -1,9 +1,6 @@
 from grade_data import students
 
 
-
-
-
 sum_grade = 0
 num_passed = 0
 num_student_normal = 0
