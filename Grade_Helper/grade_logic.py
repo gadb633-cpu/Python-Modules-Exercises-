@@ -13,7 +13,7 @@ def get_grade_status(grade):
 
 
 def calculate_average(sum_grade,num_student_normal):
-    return sum_grade/num_student_normal
+    return f"Average: {sum_grade/num_student_normal}"
     
 
 def count_passed_students(num_passed):

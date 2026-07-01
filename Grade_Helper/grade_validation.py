@@ -1,11 +1,17 @@
 from grade_data import students
 
-def validate_student(student):
+def validate_student_and_grade(student,grade):
     try:
         if isinstance(student,tuple):
             if len(student) == 2:
                 if isinstance(student[0],str):
-                    return True
+                    if isinstance(student[1],int):
+                        if 0 <grade <= 100:
+                            return True
+                        else:
+                            return "Skipped student: Grade must be between 0 and 100"
+                    else:
+                        return "Skipped student: Grade must be an integer"
                 else:
                     return "Skipped student: Name must be a string"
             else:
@@ -17,17 +23,6 @@ def validate_student(student):
     except TypeError:
         return "typeerror"
     
-            
-                
 
-def validate_grade(grade):
-    try:
-        if 0 <grade <= 100:
-            return True
-        else:
-            return "Skipped student: Grade must be between 0 and 100"
-    except ValueError:
-        return "valueerror"
-    except TypeError:
-        return "typeerror"
+
 
