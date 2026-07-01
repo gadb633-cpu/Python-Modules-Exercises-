@@ -14,6 +14,10 @@ def validate_student(student):
             
                 
 
-
 def validate_grade(grade):
-    pass
+    if 0 <grade <= 100:
+        return True
+    else:
+        return "Skipped student: Grade must be between 0 and 100"
+print(validate_grade(120))    
+
